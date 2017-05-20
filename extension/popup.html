@@ -1,0 +1,22 @@
+<!doctype html>
+<link rel="stylesheet" href="../../css/main.css" />
+<div class="popup">
+	<script src="floating.js"></script>
+	<h1 class="header-text">PV</h1>
+	<div class="seperator"></div>
+	<div class="container">
+		<p>APPLICATION</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+var s = document.createElement('floating');
+// TODO: add "script.js" to web_accessible_resources in manifest.json
+s.src = chrome.extension.getURL('floating.js');
+s.onload = function() {
+    this.remove();
+};
+(document.head || document.documentElement).appendChild(s);
+
+</script>
