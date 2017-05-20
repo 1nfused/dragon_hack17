@@ -1,7 +1,6 @@
 <!doctype html>
 <link rel="stylesheet" href="../../css/main.css" />
 <div class="popup">
-	<script src="floating.js"></script>
 	<h1 class="header-text">PV</h1>
 	<div class="seperator"></div>
 	<div class="container">
@@ -10,13 +9,28 @@
 </div>
 
 <script type="text/javascript">
-
-var s = document.createElement('floating');
+var socket = document.createElement('socket.io');
 // TODO: add "script.js" to web_accessible_resources in manifest.json
-s.src = chrome.extension.getURL('floating.js');
-s.onload = function() {
+socket.src = chrome.extension.getURL('js/socket.io.js');
+socket.onload = function() {
     this.remove();
 };
-(document.head || document.documentElement).appendChild(s);
+(document.head || document.documentElement).appendChild(socket);
+
+var script = document.createElement('script');
+// TODO: add "script.js" to web_accessible_resources in manifest.json
+script.src = chrome.extension.getURL('js/script.js');
+script.onload = function() {
+    this.remove();
+};
+(document.head || document.documentElement).appendChild(script);
+
+var floating = document.createElement('floating');
+// TODO: add "script.js" to web_accessible_resources in manifest.json
+floating.src = chrome.extension.getURL('js/floating.js');
+floating.onload = function() {
+    this.remove();
+};
+(document.head || document.documentElement).appendChild(floating);
 
 </script>

@@ -1,7 +1,7 @@
 {
   "name": "Bot App Test",
-  "version": "0.1.2",
-  "manifest_version": 3,
+  "version": "0.1.5",
+  "manifest_version": 5,
   "description": "Yade yade",
   "browser_action": {
     "default_icon": "icon.png",
@@ -14,12 +14,13 @@
           "http://*/*", "https://*/*"
       ],
       "js": [
-        "floating.js",
-        "script.js"
+        "js/floating.js",
+        "js/socket.io.js",
+        "js/script.js"
       ]
     }
 ],
-"web_accessible_resources": ["floating.js", "script.js"],
+"web_accessible_resources": ["js/floating.js", "js/socket.io.js", "js/script.js"],
 "permissions": [
     "storage",
     "activeTab"
