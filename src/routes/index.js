@@ -1,9 +1,27 @@
 var express = require('express');
-var router = express.Router();
+var request = require('request');
+var bodyParser = require('body-parser');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+var app = express()
+
+app.set('port', (process.env.PORT || 3000));
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+app.get('/',  function(req, res){
+  res.send("Hi, my name is chatbot");
 });
 
-module.exports = router;
+app.get('/webhook/', function(req, res){
+    if(req.query['hub.verify_token'] == "dragonhack2017"){
+      res.send(req.query['hub.challenge']);
+    }
+    res.send("Wrong token");
+})
+
+
+
+app.listen(app.get('port'), function(){
+  consol.log("App started");
+});
