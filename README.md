@@ -1,1 +1,1 @@
-# REPO FOR DRAGON HACK EVENT #
+##  Repository for the Dragon hack '17 Event. ##
