@@ -44,19 +44,19 @@ socket.on('foo', function (data) {
             });
             break;
         case 3:
-            // smiley
+            // zaspan
             floating({
-                content: '<img src="https://emojipedia-us.s3.amazonaws.com/cache/a8/57/a857eb7cf744d9a565685bb713aa20d5.png">',
+                content: '<img src="https://emojipedia-us.s3.amazonaws.com/cache/1a/e4/1ae4bfca0bd939df842cdff2b6ac3c40.png">',
                 number: 1,
                 repeat: 1,
                 duration: 8,
                 size: 5
             });
             break;
-        case 4:
-            // zaspan
+        case 3:
+            // smiley
             floating({
-                content: '<img src="https://emojipedia-us.s3.amazonaws.com/cache/1a/e4/1ae4bfca0bd939df842cdff2b6ac3c40.png">',
+                content: '<img src="https://emojipedia-us.s3.amazonaws.com/cache/e2/6d/e26dc62fae63f60f4c683deb93978ef6.png">',
                 number: 1,
                 repeat: 1,
                 duration: 8,
