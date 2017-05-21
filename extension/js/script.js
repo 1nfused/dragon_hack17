@@ -4,7 +4,7 @@ var socket = io(SERVER);
 // Accept emoji
 socket.on('foo', function (data) {
   floating({
-    content: data["emoji"],
+    content: "images/" + data["emoji"],
     number: 1,
     duration: 8
   });
