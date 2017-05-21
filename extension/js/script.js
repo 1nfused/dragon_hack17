@@ -31,9 +31,24 @@ function startPresentation() {
   	}, 1000);
 }
 
+document.addEventListener('click', this.showCheckboxes.bind(this));
+
 document.addEventListener('click', function (e) {
 	console.log("Clicked start");
 	startPresentation();
 });
+
+var expanded = false;
+
+    function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }
+    }
 
 

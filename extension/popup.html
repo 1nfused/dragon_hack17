@@ -1,17 +1,40 @@
 <!doctype html>
 <link rel="stylesheet" href="../../css/main.css" />
+<script src="js/floating.js.js"></script>
+<script src="js/socket.io.js"></script>
+<script src="js/script.js"></script>
 <div class="popup">
-	<h1 class="header-text">PV</h1>
-	<div class="seperator"></div>
-	<div class="container">
-		<p>Presentation Voter</p>
-		<p id="evt_timer"></p>
-		<button onclick="startPresentation()">START</button>
-	</div>
+    <h1 class="header-text">PV</h1>
+    <div class="seperator"></div>
+    <div class="container">
+        <p>Presentation Voter</p>
+        <form>
+            <div class="multiselect">
+                <div class="selectBox" id="dropDown">
+                    <select>
+                    <option>Select an option</option>
+                </select>
+                    <div class="overSelect"></div>
+                </div>
+                <div id="checkboxes">
+                    <label for="one">
+                    <input type="checkbox" id="one" /><img src="img/ok.png" alt="ok emoji" height="30" width="30"></label>
+                    <label for="two">
+                    <input type="checkbox" id="two" /><img src="img/thumbdown.png" alt="thumb up emoji" height="30" width="30"></label>
+                    <label for="three">
+                    <input type="checkbox" id="three" /><img src="img/heart.png" alt="heart emoji" height="30" width="30"></label>
+                </div>
+            </div>
+        </form>
+        <p id="evt_timer"></p>
+        <button onclick="startPresentation()">START</button>
+    </div>
 </div>
 
 <script type="text/javascript">
-/*
+
+    
+    /*
 var socket = document.createElement('socket.io');
 // TODO: add "script.js" to web_accessible_resources in manifest.json
 socket.src = chrome.extension.getURL('js/socket.io.js');
@@ -47,4 +70,5 @@ var script = document.createElement('script');
 script.textContent = actualCode;
 (document.head||document.documentElement).appendChild(script);
 script.remove(); */
+
 </script>
