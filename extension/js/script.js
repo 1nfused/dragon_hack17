@@ -12,7 +12,6 @@ socket.on('foo', function () {
 
 
 function startPresentation() {
-	window.alert("HEyah");
   	var countDownDate = new Date().getTime();
 
   	// Update the count down every 1 second
@@ -28,9 +27,13 @@ function startPresentation() {
     	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     	// Display the result in the element with id="demo"
-    	document.getElementById("evt_timer").innerHTML = minutes + "m " + seconds + "s ";
+    	document.getElementById("#evt_timer").innerHTML = minutes + "m " + seconds + "s ";
   	}, 1000);
 }
 
+document.addEventListener('click', function (e) {
+	console.log("Clicked start");
+	startPresentation();
+});
 
 
