@@ -189,3 +189,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 #checkboxes label:hover {
   background-color: #1e90ff;
 }
+.timer {
+  text-align: center;
+  margin: 10px;
+  color: #01b9db;
+}
